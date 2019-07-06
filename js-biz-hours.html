@@ -1,0 +1,22 @@
+<style>
+  html{background-color: #aaa;;
+</style>
+<p id="open"></p>
+
+<script>
+  openTime = 10;
+  closeTime = 21;
+  var d = new Date();
+  var hours = d.getHours();
+  var mins = d.getMinutes();
+  var day = d.getDay();
+
+  /* Set Day (0-6=Sunday-Saturday) and Hours (24) */
+  if (day != 1 && hours >= 10 && hours < 21) {
+    document.getElementById("open").innerHTML =
+      "<span style='color: greenyellow;'>OPEN NOW</span>";
+  } else {
+    document.getElementById("open").innerHTML =
+      "<span style='color: red;'>CLOSED</span>";
+  }
+</script>
